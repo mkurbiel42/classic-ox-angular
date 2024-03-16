@@ -1,0 +1,59 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.board{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin: 4px auto;
+  width: min-content;
+  border: 1px solid darkgray;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  width: fit-content;
+}
+
+.tile{
+  width: 32px;
+  height: 32px;
+  border: 1px solid darkgray;
+  user-select: none;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.tile:not(.filled){
+  cursor:pointer;
+}
+.tile.scored{
+  background-color: antiquewhite;
+  /* background-color: rgb(255, 225, 225); */
+}
+
+.blue {
+  color: hsl(224, 76%, 52%)
+}
+
+.red {
+  color: hsl(355, 76%, 52%)
+}
+
+.scoreboard{
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2.5em;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 0.2em;
+  background-color: white;
+  padding: 0.25em 0.5em;
+  margin: 0.25em;
+}

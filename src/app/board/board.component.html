@@ -1,0 +1,18 @@
+<div class="board">
+  <div class="row" *ngFor="let tileRow of tilesList">
+    <div class="tile"
+      *ngFor="let tile of tileRow"
+      (click)="click(tile.x, tile.y)"
+      [innerText]="tile.status"
+      [class.filled]="tile.status != ''"
+      [class.scored]="tile.scored"
+      [class.blue]="tile.status == 'O'"
+      [class.red]="tile.status == 'X'"
+      >
+    </div>
+  </div>
+</div>
+
+<div class="scoreboard">
+  <span class="blue">{{scores.O}}</span> - <span class="red">{{scores.X}}</span>
+</div>
